@@ -64,6 +64,20 @@
       max-width: 900px;
       margin: 6rem auto;
       padding: 0 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.4s; }
+    section:nth-of-type(4) { animation-delay: 0.6s; }
+    section:nth-of-type(5) { animation-delay: 0.8s; }
+    section:nth-of-type(6) { animation-delay: 1.0s; }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     h2 {
       font-size: 2rem;
@@ -111,6 +125,7 @@
   <section id="about">
     <h2>About Me</h2>
     <p>Hello! My name is Safwaan Khan. I am a current Ph.D. student in the Pharmaceutical Sciences and Pharmacogenomics (PSPG) program at UCSF.</p>
+    <p></p>
     <p>As an undergraduate student at UCLA, under the direction of Dr. Owen Witte, I contributed to novel antigen discovery for the development of immunotherapies for solid tumors (CRPC, NEPC, SCLC). In my graduate studies, under the direction of Dr. Hideho Okada and Dr. Justin Eyquem, I hope to utilize my interests in cancer biology, neuroimmunology, and bioengineering to design and optimize immunotherapies for solid tumors, specifically in the context of brain cancer.</p>
   </section>
 
@@ -132,7 +147,7 @@
   <section id="publications">
     <h2>Publications & Presentations</h2>
     <ul>
-      <li><strong>Khan SH</strong>, Choi Y, Veena M, Lee JK, Shin DS. (2025). Advances in CAR T Cell Therapy. <em>Frontiers in Immunology</em>.</li>
+      <li><strong>S. H. Khan</strong>, Y. Choi, M. Veena, J. K. Lee, D. S. Shin (2025). <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1489827/full" target="_blank"> Advances in CAR T Cell Therapy: Antigen Selection, Modifications, and Current Trials for Solid Tumors</a>. <em> Frontiers in Immunology</em>.</li>
       <li>SPUR Oral Presentation: CAR T Cell Therapy and Prostate Cancer. UCLA, 2023.</li>
     </ul>
   </section>
