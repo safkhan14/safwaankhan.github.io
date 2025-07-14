@@ -4,81 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Safwaan H. Khan</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f8fa;
+      color: #333;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #0066cc;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 700px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Safwaan H. Khan</h1>
-      <p>Ph.D. Student – Pharmaceutical Sciences & Pharmacogenomics @ UCSF</p>
-      <p><a href="mailto:safwaan.khan@ucsf.edu">safwaan.khan@ucsf.edu</a> | 510-673-1541</p>
-    </div>
+    <nav>
+      <div><strong>Safwaan H. Khan</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>UCSF</strong> – Ph.D. in PSPG (2024–Present), GPA: 4.00</li>
-        <li><strong>UCLA</strong> – B.S. in Biochemistry (2021–2024), GPA: 3.98</li>
-      </ul>
-    </section>
+  <section class="hero">
+    <h1>Ph.D. Student in Pharmaceutical Sciences & Pharmacogenomics at UCSF</h1>
+  </section>
 
-    <section>
-      <h2>Research Experience</h2>
-      <ul>
-        <li>
-          <strong>Eyquem Lab, UCSF</strong> (2025–)<br>
-          Engineered CAR-T therapies against solid tumor antigens. Designed and cloned AAV vectors.
-        </li>
-        <li>
-          <strong>Okada Lab, UCSF</strong> (2024)<br>
-          Studied hypoxic glioblastoma regions; identified splice epitope upregulation via bioinformatics.
-        </li>
-        <li>
-          <strong>Owen Witte Lab, UCLA</strong> (2022–2024)<br>
-          Developed TCRs for PAP. Isolated MHC complexes for MS. Engineered nanobody-antibody constructs.
-        </li>
-        <li>
-          <strong>Loes Loohuis Lab, UCLA</strong> (2021–2023)<br>
-          Helped build Latin American biobank; coordinated neurobehavioral data collection.
-        </li>
-      </ul>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a Ph.D. student at UCSF passionate about CAR-T cell therapy, immuno-oncology, and translational research. Previously, I completed a B.S. in Biochemistry at UCLA with honors.</p>
+  </section>
 
-    <section>
-      <h2>Industry Experience</h2>
-      <ul>
-        <li><strong>CooperVision</strong> – Clinical Research Intern (2022)<br>
-          Co-authored clinical development plans and designed a study tracker system.
-        </li>
-      </ul>
-    </section>
+  <section id="research">
+    <h2>Research Experience</h2>
+    <ul>
+      <li><strong>Eyquem Lab (UCSF)</strong> – Engineered CAR-T therapies and designed AAV constructs (2025–Present)</li>
+      <li><strong>Okada Lab (UCSF)</strong> – Hypoxia models and splice variant profiling in glioblastoma (2024)</li>
+      <li><strong>Witte Lab (UCLA)</strong> – TCR target discovery in prostate and lung cancer (2022–2024)</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Publications & Presentations</h2>
-      <ul>
-        <li><em>Khan SH</em> et al. (2025). Advances in CAR T Cell Therapy. <strong>Front Immunol</strong>.</li>
-        <li>SPUR Oral Presentation: CAR T Cell Therapy and Prostate Cancer. UCLA, 2023.</li>
-      </ul>
-    </section>
+  <section id="cv">
+    <h2>CV</h2>
+    <p>You can <a href="Resume_SafwaanKhan.pdf" target="_blank">download my full CV here</a>.</p>
+  </section>
 
-    <section>
-      <h2>Awards & Honors</h2>
-      <ul>
-        <li>Magna Cum Laude, UCLA (2024)</li>
-        <li>Departmental Highest Honors, UCLA (2024)</li>
-        <li>UCLA URC Research Scholar (2023)</li>
-        <li>Van Trees Endowment Award (2023)</li>
-        <li>National Merit Scholar (2021)</li>
-      </ul>
-    </section>
-  </main>
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Khan SH, et al. Advances in CAR T Cell Therapy. <em>Frontiers in Immunology</em>, 2025.</li>
+      <li>Oral Presentation – CAR T Cell Therapy & Prostate Cancer. SPUR Research Showcase, UCLA, 2023.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:safwaan.khan@ucsf.edu">safwaan.khan@ucsf.edu</a><br>
+       Phone: 510-673-1541</p>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Safwaan H. Khan</p>
-    </div>
+    <p>© 2025 Safwaan H. Khan</p>
   </footer>
 </body>
 </html>
+
