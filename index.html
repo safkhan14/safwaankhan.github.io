@@ -17,6 +17,7 @@
       background-color: #ffffff;
       color: #1a1a1a;
       line-height: 1.6;
+      padding-bottom: 80px; /* reserve space for static contact bar */
     }
     header {
       position: fixed;
@@ -108,11 +109,16 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 2rem 0;
+      padding: 1rem 0;
       background-color: #f8f8f8;
+      z-index: 999;
     }
     .footer-bar a img {
       width: 28px;
@@ -129,6 +135,7 @@
       background-color: #f8f8f8;
       font-size: 0.9rem;
       color: #555;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -138,7 +145,6 @@
       <div><a href="#about"><strong>Safwaan H. Khan</strong></a></div>
       <div>
         <a href="#research">Research</a>
-        <a href="#cv">CV</a>
         <a href="#publications">Publications</a>
         <a href="#industry">Industry</a>
         <a href="#awards">Awards</a>
@@ -168,20 +174,7 @@
     </ul>
   </section>
 
-  <section id="cv" style="--i:3;">
-    <h2>Curriculum Vitae</h2>
-    <p><a href="Resume_SafwaanKhan.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </section>
-
-  <section id="publications" style="--i:4;">
-    <h2>Publications & Presentations</h2>
-    <ul>
-      <li><strong>S. H. Khan</strong>, Y. Choi, M. Veena, J. K. Lee, D. S. Shin (2025). <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1489827/full" target="_blank">Advances in CAR T Cell Therapy: Antigen Selection, Modifications, and Current Trials for Solid Tumors</a>. <em>Frontiers in Immunology</em>.</li>
-      <li>SPUR Oral Presentation: CAR T Cell Therapy and Prostate Cancer. UCLA, 2023.</li>
-    </ul>
-  </section>
-
-  <section id="industry" style="--i:5;">
+  <section id="industry" style="--i:3;">
     <h2>Industry Experience</h2>
     <div class="industry-item">
       <img src="coopervision.jpeg" alt="CooperVision Logo" class="industry-logo">
@@ -199,7 +192,15 @@
     </div>
   </section>
 
-  <section id="awards" style="--i:6;">
+  <section id="publications" style="--i:4;">
+    <h2>Publications & Presentations</h2>
+    <ul>
+      <li><strong>S. H. Khan</strong>, Y. Choi, M. Veena, J. K. Lee, D. S. Shin (2025). <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1489827/full" target="_blank">Advances in CAR T Cell Therapy: Antigen Selection, Modifications, and Current Trials for Solid Tumors</a>. <em>Frontiers in Immunology</em>.</li>
+      <li>SPUR Oral Presentation: CAR T Cell Therapy and Prostate Cancer. UCLA, 2023.</li>
+    </ul>
+  </section>
+
+  <section id="awards" style="--i:5;">
     <h2>Awards & Honors</h2>
     <ul>
       <li>2024 UCLA Department of Chemistry and Biochemistry: Departmental Highest Honors</li>
@@ -210,6 +211,11 @@
       <li>2021 National Merit Scholar</li>
       <li>2017 First Robotics Championship (FRC) World Champion - Team 254</li>
     </ul>
+  </section>
+
+  <section id="cv" style="--i:6;">
+    <h2>Curriculum Vitae</h2>
+    <p><a href="Resume_SafwaanKhan.pdf" target="_blank">Download My Resume (PDF)</a></p>
   </section>
 
   <section id="contact" style="--i:7;">
