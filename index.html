@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Safwaan H. Khan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,8 +17,10 @@
       background-color: #ffffff;
       color: #1a1a1a;
       line-height: 1.6;
-      padding-bottom: 80px; /* reserve space for static contact bar */
-      font-size: 16px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
     header {
       position: fixed;
@@ -36,34 +38,51 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      flex-wrap: nowrap;
+      position: relative;
     }
-    nav > div:first-child {
-      order: 1;
-    }
-    .nav-links {
+    nav .nav-links {
       display: flex;
       gap: 1.5rem;
-      order: 3;
     }
-    nav a {
+    nav .nav-links a {
       text-decoration: none;
       color: #1a1a1a;
       font-weight: 500;
       transition: color 0.3s ease;
-      font-size: 1rem;
     }
-    nav a:hover {
+    nav .nav-links a:hover {
       color: #0057ff;
     }
+
     .hamburger {
       display: none;
-      font-size: 1.8rem;
+      width: 28px;
+      height: 22px;
+      flex-direction: column;
+      justify-content: space-between;
       background: none;
       border: none;
       cursor: pointer;
-      order: 2;
+      padding: 0;
+      z-index: 1100;
     }
+    .hamburger .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #1a1a1a;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .nav-open .hamburger .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav-open .hamburger .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-open .hamburger .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     .hero {
       height: 50vh;
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('CART.jpg') center/cover no-repeat;
@@ -73,6 +92,7 @@
       text-align: center;
       color: white;
       padding: 2rem;
+      margin-top: 60px;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -81,7 +101,7 @@
     }
     section {
       max-width: 900px;
-      margin: 6rem auto;
+      margin: 5rem auto;
       padding: 0 2rem;
       opacity: 0;
       transform: translateY(50px);
@@ -129,7 +149,7 @@
     }
     .award-item {
       display: flex;
-      align-items: center;
+      align-items: center; 
       gap: 0.8rem;
       margin-bottom: 1rem;
       flex-wrap: nowrap;
@@ -150,13 +170,13 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       background-color: #f8f8f8;
       z-index: 999;
     }
     .footer-bar a img {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       opacity: 0.8;
       transition: opacity 0.3s ease;
     }
@@ -169,60 +189,62 @@
       background-color: #f8f8f8;
       font-size: 0.9rem;
       color: #555;
-      margin-top: 2rem;
     }
 
-    /* Mobile styles */
+    /* MOBILE STYLES */
     @media (max-width: 768px) {
-      nav {
-        padding: 1rem 1rem;
-      }
-      .nav-links {
-        display: none;
+      nav .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 1.5rem;
+        background-color: white;
         flex-direction: column;
-        width: 100%;
-        margin-top: 0.5rem;
-        order: 3;
-      }
-      .nav-links a {
-        margin: 0.5rem 0;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        font-size: 0.9rem;
+        align-items: flex-end;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(-20px);
+        opacity: 0;
+        display: none;
       }
       .nav-open .nav-links {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
       }
+
       .hamburger {
-        display: block;
-        order: 2;
+        display: flex;
       }
-      body {
-        font-size: 14px;
+
+      .hero {
+        height: 40vh;
+        margin-top: 60px;
       }
-      h2 {
+
+      .hero h1 {
         font-size: 1.3rem;
-        margin-bottom: 0.6rem;
       }
+
       section {
         margin: 3rem auto;
         padding: 0 1rem;
       }
-      .footer-bar {
-        padding: 0.5rem 0;
-        gap: 1rem;
+
+      h2 {
+        font-size: 1.3rem;
       }
+
+      body {
+        font-size: 0.9rem;
+        padding-bottom: 60px;
+      }
+
       .footer-bar a img {
-        width: 22px;
-        height: 22px;
-      }
-      .industry-logo {
-        width: 45px;
-      }
-      .award-logo {
-        width: 38px;
-        transform: translateY(2px);
+        width: 20px;
+        height: 20px;
       }
     }
   </style>
@@ -231,7 +253,6 @@
   <header>
     <nav>
       <div><a href="#about"><strong>Safwaan H. Khan</strong></a></div>
-      <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
       <div class="nav-links">
         <a href="#research">Research</a>
         <a href="#industry">Industry</a>
@@ -239,6 +260,11 @@
         <a href="#awards">Awards</a>
         <a href="#cv">CV</a>
       </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </nav>
   </header>
 
@@ -400,17 +426,8 @@
   </section>
 
   <div class="footer-bar">
-    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank"
-      ><img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-        alt="LinkedIn"
-    /></a>
-    <a href="mailto:safwaan.khan@ucsf.edu"
-      ><img
-        src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
-        alt="Email"
-        style="width: 28px;"
-    /></a>
+    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
+    <a href="mailto:safwaan.khan@ucsf.edu"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email"></a>
   </div>
 
   <footer>
@@ -418,11 +435,20 @@
   </footer>
 
   <script>
-    // Toggle nav links on hamburger click
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
+
     hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
       nav.classList.toggle('nav-open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && nav.classList.contains('nav-open')) {
+        nav.classList.remove('nav-open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
     });
   </script>
 </body>
