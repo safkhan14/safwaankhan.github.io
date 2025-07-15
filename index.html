@@ -37,7 +37,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2.5rem 1rem 2rem; /* increased right padding */
+  padding: 1rem 2rem;
   position: relative;
 }
 nav .nav-links {
@@ -54,10 +54,11 @@ nav .nav-links a:hover {
   color: #0057ff;
 }
 
+/* Hamburger menu */
 .hamburger {
   display: none;
-  width: 28px;
-  height: 22px;
+  width: 32px;
+  height: 24px;
   flex-direction: column;
   justify-content: space-between;
   background: none;
@@ -65,7 +66,8 @@ nav .nav-links a:hover {
   cursor: pointer;
   padding: 0;
   z-index: 1100;
-  margin-right: 0.5rem; /* add right margin to prevent clipping */
+  overflow: visible;
+  margin-right: 0;
 }
 .hamburger .bar {
   height: 3px;
@@ -73,15 +75,16 @@ nav .nav-links a:hover {
   background-color: #1a1a1a;
   border-radius: 2px;
   transition: 0.3s;
+  transform-origin: center;
 }
 .nav-open .hamburger .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 .nav-open .hamburger .bar:nth-child(2) {
   opacity: 0;
 }
 .nav-open .hamburger .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .hero {
@@ -150,7 +153,7 @@ a {
 }
 .award-item {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 0.8rem;
   margin-bottom: 1rem;
   flex-wrap: nowrap;
@@ -186,20 +189,15 @@ a {
 }
 footer {
   text-align: center;
-  padding: 1rem;
   background-color: #f8f8f8;
   font-size: 0.9rem;
   color: #555;
 }
 
-/* MOBILE STYLES */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .industry-logo {
-    width: 45px; /* 25% smaller than 60px */
-  }
-  
-  nav {
-    padding-right: 2.5rem; /* keep right padding on mobile */
+  .hamburger {
+    display: flex;
   }
 
   nav .nav-links {
@@ -217,23 +215,20 @@ footer {
     transform-origin: top right;
     transform: scaleY(0);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    text-align: center;  /* Center text */
+    text-align: center;
   }
+
   nav.nav-open .nav-links {
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
   }
+
   nav .nav-links a {
     padding: 0.75rem 1rem;
     font-size: 1rem;
     display: block;
-    margin: 0 auto; /* Center block element */
-  }
-
-  .hamburger {
-    display: flex;
-    margin-right: 0.5rem; /* ensure margin on mobile */
+    margin: 0 auto;
   }
 
   .hero {
@@ -252,6 +247,7 @@ footer {
 
   h2 {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   body {
@@ -262,6 +258,13 @@ footer {
   .footer-bar a img {
     width: 20px;
     height: 20px;
+  }
+
+  .industry-logo {
+    width: 40px;
+  }
+  .award-logo {
+    width: 32px;
   }
 }
 
