@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Safwaan H. Khan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -55,7 +55,7 @@
     }
 
     .hamburger {
-      display: none;
+      display: none; /* hide on desktop */
       width: 28px;
       height: 22px;
       flex-direction: column;
@@ -194,40 +194,37 @@
     /* MOBILE STYLES */
     @media (max-width: 768px) {
       .industry-logo {
-      width: 45px; /* 25% smaller than 60px */
-    }
-    }
-    
-    @media (max-width: 768px) {
-    nav .nav-links {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: white;
-      flex-direction: column;
-      width: 160px;
-      padding: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      border-radius: 0 0 8px 8px;
-      opacity: 0;
-      visibility: hidden;
-      transform-origin: top right;
-      transform: scaleY(0);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      text-align: center;  /* <-- Center the text */
-    }
-    nav.nav-open .nav-links {
-      opacity: 1;
-      visibility: visible;
-      transform: scaleY(1);
-    }
-    nav .nav-links a {
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      display: block;
-      margin: 0 auto; /* Center block element */
-    }
-  }
+        width: 45px; /* 25% smaller than 60px */
+      }
+
+      nav .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 160px;
+        padding: 1rem 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border-radius: 0 0 8px 8px;
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: top right;
+        transform: scaleY(0);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        text-align: center;
+      }
+      nav.nav-open .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+      }
+      nav .nav-links a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        display: block;
+        margin: 0 auto;
+      }
 
       .hamburger {
         display: flex;
@@ -280,6 +277,7 @@
         <a href="#publications">Publications</a>
         <a href="#awards">Awards</a>
         <a href="#cv">CV</a>
+      </div>
     </nav>
   </header>
 
@@ -441,8 +439,8 @@
   </section>
 
   <div class="footer-bar">
-    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
-    <a href="mailto:safwaan.khan@ucsf.edu"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email"></a>
+    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
+    <a href="mailto:safwaan.khan@ucsf.edu"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" /></a>
   </div>
 
   <footer>
@@ -452,6 +450,7 @@
   <script>
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
+    const navName = document.getElementById('nav-name');
 
     hamburger.addEventListener('click', () => {
       const expanded = hamburger.getAttribute('aria-expanded') === 'true';
@@ -466,12 +465,14 @@
       }
     });
 
-    <script>
-    const navName = document.getElementById('nav-name');
-      navName.addEventListener('click', () => {
+    navName.addEventListener('click', () => {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+      // close nav if open
+      if (nav.classList.contains('nav-open')) {
+        nav.classList.remove('nav-open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
     });
-</script>
   </script>
 </body>
 </html>
