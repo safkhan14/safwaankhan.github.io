@@ -138,7 +138,14 @@
       margin-top: 2rem;
     }
     section {
-  scroll-margin-top: 100px;
+      scroll-margin-top: 100px;
+    }
+    .award-logo {
+      width: 36px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -243,17 +250,58 @@
   </section>
 
   <section id="awards" style="--i:5;">
-    <h2>Awards & Honors</h2>
-    <ul>
-      <li>2024 UCLA Department of Chemistry and Biochemistry: Departmental Highest Honors</li>
-      <li>2024 UCLA College of Letters and Sciences: Magna Cum Laude</li>
-      <li>2023 UCLA Undergraduate Research Center (URC): Summer Sciences Research Scholar</li>
-      <li>2023 UCLA College of Letters and Sciences: Rex & Ruth van Trees Endowment for Excellence in Life Sciences Research</li>
-      <li>2021 Dell Merit Scholar</li>
-      <li>2021 National Merit Scholar</li>
-      <li>2017 First Robotics Championship (FRC) World Champion - Team 254</li>
-    </ul>
-  </section>
+  <h2>Awards & Honors</h2>
+
+  <div class="industry-item">
+    <a href="https://www.chemistry.ucla.edu/" target="_blank">
+      <img src="UCLA_Chem.jpeg" alt="UCLA Chemistry Logo" class="award-logo">
+    </a>
+    <div>2024 UCLA Department of Chemistry and Biochemistry: Departmental Highest Honors</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.college.ucla.edu/" target="_blank">
+      <img src="UCLA_College.jpeg" alt="UCLA College Logo" class="award-logo">
+    </a>
+    <div>2024 UCLA College of Letters and Sciences: Magna Cum Laude</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.research.ucla.edu/" target="_blank">
+      <img src="UCLA_URC.jpeg" alt="UCLA URC Logo" class="award-logo">
+    </a>
+    <div>2023 UCLA Undergraduate Research Center (URC): Summer Sciences Research Scholar</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.college.ucla.edu/research/" target="_blank">
+      <img src="UCLA_College.jpeg" alt="UCLA Van Trees Endowment Logo" class="award-logo">
+    </a>
+    <div>2023 UCLA College of Letters and Sciences: Rex & Ruth van Trees Endowment for Excellence in Life Sciences Research</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.dell.org/" target="_blank">
+      <img src="Dell.jpeg" alt="Dell Scholar Logo" class="award-logo">
+    </a>
+    <div>2021 Dell Merit Scholar</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.nationalmerit.org/s/1758/start.aspx?gid=2&pgid=61" target="_blank">
+      <img src="NationalMerit.jpeg" alt="National Merit Scholar Logo" class="award-logo">
+    </a>
+    <div>2021 National Merit Scholar</div>
+  </div>
+
+  <div class="industry-item">
+    <a href="https://www.team254.com/" target="_blank">
+      <img src="254.png" alt="FIRST Robotics Team 254 Logo" class="award-logo">
+    </a>
+    <div>2017 FIRST Robotics Championship (FRC) World Champion – Team 254</div>
+  </div>
+</section>
+
 
   <section id="cv" style="--i:6;">
     <h2>Curriculum Vitae</h2>
