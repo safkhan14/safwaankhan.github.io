@@ -147,4 +147,223 @@
       height: auto;
       flex-shrink: 0;
       border-radius: 8px;
-      box-shadow: 0
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .award-item {
+      display: flex;
+      align-items: center; 
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      flex-wrap: nowrap;
+    }
+    .award-logo {
+      width: 48px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transform: translateY(3px);
+    }
+
+    .footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      background-color: #f8f8f8;
+      z-index: 999;
+    }
+    .footer-bar a img {
+      width: 28px;
+      height: 28px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .footer-bar a:hover img {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f8f8f8;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div><a href="#about"><strong>Safwaan H. Khan</strong></a></div>
+      <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#industry">Industry</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#cv">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Engineering Immunotherapies for Solid Tumors — CAR T Cell Research at UCSF</h1>
+  </section>
+
+  <section id="about" style="--i:1;">
+    <h2>About Me</h2>
+    <p>Hello! My name is Safwaan Khan. I am a current Ph.D. student in the Pharmaceutical Sciences and Pharmacogenomics (PSPG) program at UCSF.</p>
+    <br>
+    <p>As an undergraduate student at UCLA, under the direction of Dr. Owen Witte, I contributed to novel antigen discovery for the development of immunotherapies for solid tumors (CRPC, NEPC, SCLC). In my graduate studies, under the direction of Dr. Hideho Okada and Dr. Justin Eyquem, I hope to utilize my interests in cancer biology, neuroimmunology, and bioengineering to design and optimize immunotherapies for solid tumors, specifically in the context of brain cancer.</p>
+  </section>
+
+<section id="research" style="--i:2;">
+  <h2>Research Experience</h2>
+
+  <div class="industry-item">
+    <a href="https://www.eyquemlab.org/" target="_blank">
+      <img src="UCSF.jpeg" alt="UCSF Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Ph.D. Student</strong> – Justin Eyquem Lab, UCSF(2025 – present)<br>
+      Engineering CAR-T therapies against solid brain tumor antigens.
+    </div>
+  </div>
+  <div class="industry-item">
+    <a href="https://okadalab.ucsf.edu/" target="_blank">
+      <img src="UCSF.jpeg" alt="UCSF Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Ph.D. Student</strong> – Hideho Okada Lab, UCSF (2024 – present)<br>
+      Evaluating performance of engineered CAR-T therapies in glioblastoma models.
+    </div>
+  </div>
+  <div class="industry-item">
+    <a href="https://stemcell.ucla.edu/member-directory/owen-n-witte-md" target="_blank">
+      <img src="UCLA.jpeg" alt="UCLA Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Undergraduate Student Researcher</strong> – Owen Witte Lab, UCLA (2022 – 2024)<br>
+      Identified novel splice-derived antigens for CAR-T and TCR therapy. Engineered nanobody-derived antibody constructs.
+    </div>
+  </div>
+  <div class="industry-item">
+    <a href="https://loeslab.dgsom.ucla.edu/" target="_blank">
+      <img src="UCLA.jpeg" alt="UCLA Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Undergraduate Student Researcher</strong> – Loes Loohuis Lab, UCLA (2021 – 2023)<br>
+      Coordinated neurobehavioral data collection. Assisted in construction of a Latin American biobank.
+    </div>
+  </div>
+</section>
+
+<section id="industry" style="--i:3;">
+  <h2>Industry Experience</h2>
+  <div class="industry-item">
+    <a href="https://coopervision.com" target="_blank">
+      <img src="coopervision.jpeg" alt="CooperVision Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Clinical Research Intern</strong> – CooperVision (2022)<br>
+      Co-authored clinical development plans and designed a study tracker system.
+    </div>
+  </div>
+  <div class="industry-item">
+    <a href="https://www.linkedin.com/company/lucidlane/" target="_blank">
+      <img src="lucidlane.jpeg" alt="Lucid Lane Logo" class="industry-logo">
+    </a>
+    <div>
+      <strong>Clinical Research Intern</strong> – Lucid Lane Inc. (2020)<br>
+      Supported behavioral health data collection for depression studies.
+    </div>
+  </div>
+</section>
+
+<section id="publications" style="--i:4;">
+    <h2>Publications & Presentations</h2>
+    <ul>
+      <li><strong>S. H. Khan</strong>, Y. Choi, M. Veena, J. K. Lee, D. S. Shin (2025). <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1489827/full" target="_blank">Advances in CAR T Cell Therapy: Antigen Selection, Modifications, and Current Trials for Solid Tumors</a>. <em>Frontiers in Immunology</em>.</li>
+      <li>SPUR Oral Presentation: CAR T Cell Therapy and Prostate Cancer. UCLA, 2023.</li>
+    </ul>
+</section>
+  
+<section id="awards" style="--i:5;">
+  <h2>Awards & Honors</h2>
+
+  <div class="award-item">
+    <a href="https://www.chemistry.ucla.edu/" target="_blank">
+      <img src="UCLA_Chem.jpeg" alt="UCLA Chemistry Logo" class="award-logo">
+    </a>
+    <div>2024 UCLA Department of Chemistry and Biochemistry: Departmental Highest Honors</div>
+  </div>
+
+  <div class="award-item">
+    <a href="https://www.college.ucla.edu/" target="_blank">
+      <img src="UCLA_College.jpeg" alt="UCLA College Logo" class="award-logo">
+    </a>
+    <div>2024 UCLA College of Letters and Sciences: Magna Cum Laude</div>
+  </div>
+  <div class="award-item">
+    <a href="https://www.research.ucla.edu/" target="_blank">
+      <img src="UCLA_URC.jpeg" alt="UCLA URC Logo" class="award-logo">
+    </a>
+    <div>2023 UCLA Undergraduate Research Center (URC): Summer Sciences Research Scholar</div>
+  </div>
+  <div class="award-item">
+    <a href="https://www.college.ucla.edu/research/" target="_blank">
+      <img src="UCLA_College.jpeg" alt="UCLA Van Trees Endowment Logo" class="award-logo">
+    </a>
+    <div>2023 UCLA College of Letters and Sciences: Rex & Ruth van Trees Endowment for Excellence in Life Sciences Research</div>
+  </div>
+  <div class="award-item">
+    <a href="https://www.dell.org/" target="_blank">
+      <img src="Dell.jpeg" alt="Dell Scholar Logo" class="award-logo">
+    </a>
+    <div>2021 Dell Merit Scholar</div>
+  </div>
+  <div class="award-item">
+    <a href="https://www.nationalmerit.org/s/1758/start.aspx?gid=2&pgid=61" target="_blank">
+      <img src="NationalMerit.jpeg" alt="National Merit Scholar Logo" class="award-logo">
+    </a>
+    <div>2021 National Merit Scholar</div>
+  </div>
+<div class="award-item">
+    <a href="https://www.team254.com/" target="_blank">
+      <img src="254.png" alt="FIRST Robotics Team 254 Logo" class="award-logo">
+    </a>
+    <div>2017 FIRST Robotics Championship (FRC) World Champion – Team 254</div>
+  </div>
+</section>
+
+  <div class="footer-bar">
+    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+    </a>
+    <a href="mailto:safwaan.khan@ucsf.edu">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" style="width: 28px;">
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 Safwaan H. Khan</p>
+  </footer>
+
+  <!-- Hamburger toggle script -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
