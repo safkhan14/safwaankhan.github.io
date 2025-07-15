@@ -193,27 +193,35 @@
 
     /* MOBILE STYLES */
     @media (max-width: 768px) {
-      nav .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 1.5rem;
-        background-color: white;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        transform: translateY(-20px);
-        opacity: 0;
-        display: none;
-      }
-      .nav-open .nav-links {
-        display: flex;
-        transform: translateY(0);
-        opacity: 1;
-      }
+    nav .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      width: 160px;
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border-radius: 0 0 8px 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform-origin: top right;
+      transform: scaleY(0);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      text-align: center;  /* <-- Center the text */
+    }
+    nav.nav-open .nav-links {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+    }
+    nav .nav-links a {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      display: block;
+      margin: 0 auto; /* Center block element */
+    }
+  }
 
       .hamburger {
         display: flex;
@@ -252,19 +260,20 @@
 <body>
   <header>
     <nav>
-      <div><a href="#about"><strong>Safwaan H. Khan</strong></a></div>
+      <div id="nav-name" style="cursor: pointer; font-weight: 700;">Safwaan H. Khan</div>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
       <div class="nav-links">
+        <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#industry">Industry</a>
         <a href="#publications">Publications</a>
         <a href="#awards">Awards</a>
         <a href="#cv">CV</a>
-      </div>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
     </nav>
   </header>
 
@@ -450,6 +459,13 @@
         hamburger.setAttribute('aria-expanded', false);
       }
     });
+
+    <script>
+    const navName = document.getElementById('nav-name');
+      navName.addEventListener('click', () => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
   </script>
 </body>
 </html>
