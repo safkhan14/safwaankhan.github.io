@@ -303,7 +303,16 @@
         width: clamp(24px, 6vw, 32px);
       }
     }
-
+  @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
