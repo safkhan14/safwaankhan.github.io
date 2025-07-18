@@ -104,6 +104,35 @@
       line-height: 1.3;
       z-index: 2;
     }
+    .hero-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+    }
+    .hero-headshot {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      margin-bottom: 1rem;
+    }
+    .hero-name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #eee;
+      max-width: 700px;
+      padding: 0 1rem;
+      text-align: center;
+    }
     .about-section {
       position: relative;
       background:
@@ -300,7 +329,11 @@
   </header>
 
 <section class="hero">
-  <h1>Engineering Immunotherapies for Solid Tumors — CAR T Cell Research at UCSF</h1>
+  <div class="hero-overlay">
+    <img src="SK_PFPv2.png" alt="Safwaan Khan Headshot" class="hero-headshot" />
+    <h1 class="hero-name">Safwaan Khan | PhD Student at UCSF</h1>
+    <p class="hero-subtitle">Engineering Immunotherapies for Solid Tumors — CAR T Cell Research at UCSF</p>
+  </div>
 </section>
 
 <section class="about-section" id="about">
