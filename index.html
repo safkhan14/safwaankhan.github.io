@@ -86,6 +86,15 @@
     .nav-open .hamburger .bar:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
     }
+    section {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 0.8s ease forwards;
+      scroll-margin-top: 100px;
+    }
     .hero {
       min-height: calc(100vh - 60px - 40px);
       width: 100vw;
@@ -166,15 +175,6 @@
     .about-section.section,
     .about-section {
       max-width: none;
-    }
-    section {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 0 clamp(1rem, 4vw, 2rem);
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeInUp 0.8s ease forwards;
-      scroll-margin-top: 100px;
     }
     section:nth-of-type(n) {
       animation-delay: calc(0.2s * var(--i));
