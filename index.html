@@ -241,13 +241,7 @@
       padding: 0.5rem 0;
       background-color: #f8f8f8;
       z-index: 999;
-    }
-    .footer-bar a img {
-      width: clamp(20px, 3vw, 24px);
-      height: clamp(20px, 3vw, 30px);
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-    }
+    
     .footer-bar a:hover img {
       opacity: 1;
     }
@@ -258,7 +252,17 @@
       font-size: clamp(0.8rem, 1.5vw, 0.9rem);
       color: #555;
     }
-    
+    .footer-bar a img {
+      width: clamp(24px, 3vw, 28px);
+      height: clamp(24px, 3vw, 28px);
+      object-fit: contain; /* maintain aspect ratio */
+      display: block;
+    }
+  .footer-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
     /* Keep hamburger toggle styling the same */
     @media (max-width: 768px) {
       .hamburger {
@@ -519,8 +523,15 @@
   </section>
 
   <div class="footer-bar">
-    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" /></a>
-    <a href="mailto:safwaan.khan@ucsf.edu"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" /></a>
+    <a href="https://www.linkedin.com/in/safwaan-h-khan/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+    </a>
+    <a href="mailto:safwaan.khan@ucsf.edu">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" />
+    </a>
+    <a href="https://www.youtube.com/@safwaankhan_" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" />
+    </a>
   </div>
 
   <footer>
