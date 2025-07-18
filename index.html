@@ -176,6 +176,11 @@
     .about-section {
       max-width: none;
     }
+    .about-overlay {
+      max-width: 900px; /* matches other sections */
+      margin: 0 auto; /* center horizontally */
+      padding: 0 clamp(1rem, 4vw, 2rem); /* consistent horizontal padding */
+    }
     section:nth-of-type(n) {
       animation-delay: calc(0.2s * var(--i));
     }
